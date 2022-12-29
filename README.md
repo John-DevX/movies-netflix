@@ -1,12 +1,10 @@
-# Movies-netflix
+# Movies Netflix
 
-# Technologies used:
-<ul> 
-<li>HTML</li>
-<li>CSS</li>
-<li>JavaScript</li>
-</ul>
+## Technologies used:
++ HTML
++ CSS
++ JavaScript
 
-## Deploy:
+## Deploy
 
-### https://john-devx.github.io/movies-netflix/
+> https://john-devx.github.io/movies-netflix/
