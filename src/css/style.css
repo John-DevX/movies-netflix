@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500&display=swap');
 
 :root{
-  --font:'Bebas Neue', cursive;
-  --font1:'Playfair Display', serif;
+  --font: 'Poppins', sans-serif;;
 }
 
 *{
@@ -14,6 +13,7 @@
 body {
     background: #111;
     color: white;
+    font-family: var(--font);
 }
 
 .logoo{
@@ -68,7 +68,7 @@ body {
   }
 
 .banner{
-  background-image: linear-gradient(to right, rgba(0,0,0,1),0%,rgba(0,0,0,2)20%,rgba(0,0,0,0)100%), url('./img/banner.jpg');
+  background-image: linear-gradient(to right, rgba(0,0,0,1),0%,rgba(0,0,0,2)20%,rgba(0,0,0,0)100%), url('../assets/images/banner.jpg');
   background-size: cover;
   background-position: center center;
   color: white;
@@ -86,9 +86,8 @@ body {
 
 .banner_title{
   font-size: 3rem;
-  font-weight: lighter;
+  font-weight: 400;
   padding-bottom: 0.3rem;
-  font-family: var(--font1);
   opacity: 0;
   animation: fade  2.1s both;
 }
@@ -110,7 +109,7 @@ body {
   cursor: pointer;
   outline: none;
   border:none;
-  font-weight: 700;
+  font-weight: 600;
   border-radius: 0.3vw;
   padding-left: 2rem;
   padding-right: 2rem;
@@ -136,7 +135,6 @@ body {
   height: 2rem;
   font-size: 23px;
   color: white;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .logo,.avat{
@@ -149,45 +147,41 @@ body {
 @-webkit-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
-    -webkit-filter: brightness(100%);
+    -webkit-filter: brightness(50%);
   }
   100% {
     -webkit-transform: scale(1.1);
-    -webkit-filter: brightness(200%);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-    filter: brightness(85%);
-  }
-  100% {
-    transform: scale(1.1);
-    filter: brightness(200%);
+    -webkit-filter: brightness(230%);
   }
 }
 
 input{
   position: absolute;
-  right: 4.2rem;
-  background: #404040;
+  right: 5.2rem;
+  background: #505050;
   border: none;
-  color: white;
+  color: #fff;
   width: 130px;
   outline: none;
   padding-left: 30px;
   height: 1.3rem;
+  border-radius: 2px;
+}
+
+input:focus{
+  border: 1px solid #de0611;
 }
 
 input::placeholder{
-  color: white;
+  color: #fff;
 }
 
-i{
+.search{
   position: absolute;
-  right:11rem;
-  color: #ACACAC;
+  top: 23px;
+  right: 12.2rem;
+  color: #de0611;
+  font-size: 12px;
 }
 
 #data{
@@ -218,21 +212,6 @@ i{
   border-radius: 5px;
 }
 
-#load{
-  position: relative;
-  left: 42%;
-  bottom:1rem;
-  width: 60px;
-  height:60px;
-  border: solid 2px rgba(0,0,0,0.18);
-  border-left-color: red;
-  border-radius: 50%;
-  animation: load 1.2s linear infinite;
-  color:red;
-}
-@keyframes load{
-  to{transform:rotate(360deg);}
-}
 .movies{
   display: flex;
   overflow-y: hidden;
@@ -315,16 +294,32 @@ i{
   right: 0;
 }
 
-#footer{
+footer{
+  padding-bottom: 0.5rem;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 50px;
 }
 
-#footer a{
-  color: rgb(0, 132, 255);
+footer h4{
+  margin-bottom: 3px;
+  font-weight: 500;
 }
-@media (max-width: 600px){
+
+footer a{
+  text-decoration: none;
+  color: #de0611;
+}
+
+footer a:hover{
+  border-bottom: 1px solid #de0611;
+}
+
+footer p{
+  font-size: 10px;
+  color: #ccc;
+}
+
+
+@media (max-width: 700px){
     .logo{
       width: 100px !important;
       height: 2rem;
